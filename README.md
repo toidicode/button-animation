@@ -6,22 +6,42 @@ Sau khi đã tìm hiểu xong bài [tạo chuyển động animation trong CSS3]
 
 Đầu tiên mình sẽ tạo khung HTML và các thẻ cần thiết.
 
-<div class="demo-code">
 
-    Toidicode.com - Create button animation
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toidicode.com - Create button animation</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Button
+</a>
+</body>
+</html>
+```
 
-`[Button](#)`
+[Chạy Code](https://toidicode.com/live/?id=722)
 
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=722)</div>
 
-</div>
 
 ## 2. CSS cơ bản cho button.
 
 Sau khi đã HTML khung cơ bản xong, tiếp tục mình sẽ CSS cho thẻ a ở giữa màn hình và background tối màu cho mọi người dễ nhìn.
 
-<div class="demo-code">
 
+```css
     body {
         padding: 0;
         margin: 0;
@@ -46,17 +66,17 @@ Sau khi đã HTML khung cơ bản xong, tiếp tục mình sẽ CSS cho thẻ a 
         box-shadow: 0 1px 7px .4px #000000;
         color: red;
     }
+```
+[Chạy Code](https://toidicode.com/live/?id=723)
 
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=723)</div>
 
-</div>
 
 ## 3. CSS border cho button.
 
 Tiếp tục chúng ta sẽ css cho 4 thẻ span bên trong thẻ a thành border.
 
-<div class="demo-code">
 
+```css
     /*TOP*/
     a span:nth-child(1) {
         content: '';
@@ -101,15 +121,15 @@ Tiếp tục chúng ta sẽ css cho 4 thẻ span bên trong thẻ a thành borde
         top: 0;
         left: 0;
     }
+```
+[Chạy Code](https://toidicode.com/live/?id=724)
 
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=724)</div>
 
-</div>
 
 Tiếp theo đó chúng ta sẽ gradient màu sắc cho 4 thẻ span.
 
-<div class="demo-code">
 
+```css
     /*TOP*/
     a span:nth-child(1) {
         content: '';
@@ -155,10 +175,10 @@ Tiếp theo đó chúng ta sẽ gradient màu sắc cho 4 thẻ span.
         left: 0;
 
     }
+```
+[Chạy Code](https://toidicode.com/live/?id=725)
 
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=725)</div>
 
-</div>
 
 Giờ lom đã có vẻ đẹp hơn một chút rồi đó ![laugh](https://toidicode.com/vendor/unisharp/laravel-ckeditor/plugins/smiley/images/teeth_smile.png "laugh")
 
@@ -166,8 +186,8 @@ Giờ lom đã có vẻ đẹp hơn một chút rồi đó ![laugh](https://toi
 
 OK, sau khi đã css cơ bản tương đối đẹp rồi giờ chúng ta sẽ tạo ra chuyển động cho nó.
 
-<div class="demo-code">
 
+```css
     @keyframes animationdown {
             from {
                 transform: translateY(-100%);
@@ -203,13 +223,11 @@ OK, sau khi đã css cơ bản tương đối đẹp rồi giờ chúng ta sẽ 
                 transform: translateX(-100%);
             }
         }
-
-</div>
+```css
 
 Phía trên là chuyển động lên xuống trái phải cho từng thẻ span, giờ chúng ta sẽ thiết lập từ thẻ span ứng với từng animation.
 
-<div class="demo-code">
-
+```css
     /*TOP*/
     a span:nth-child(1) {
         content: '';
@@ -257,17 +275,14 @@ Phía trên là chuyển động lên xuống trái phải cho từng thẻ span
         left: 0;
         animation: animationtop 2s linear 0.3s infinite;
     }
-
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=726)</div>
-
-</div>
+```
+[Chạy Code](https://toidicode.com/live/?id=726)
 
 ![](https://toidicode.com/filemanager/images/1/blog/create_button_animation_using_html_css.png)
 
 Chuyển động đã tương đối đẹp rồi, nhưng để đẹp hơn chúng ta cần ẩn những chi tiết khi chuyển động lòi ra bên ngoài thẻ `a`. bằng cách thêm `overflow: hidden` vào thẻ `a`.
 
-<div class="demo-code">
-
+```css
     a {
         position: absolute;
         left: 50%;
@@ -283,11 +298,14 @@ Chuyển động đã tương đối đẹp rồi, nhưng để đẹp hơn chú
         transition: all 0.3s;
 
     }
+```
+[Chạy Code](https://toidicode.com/live/?id=727)
 
-<div class="run">[Chạy Code](https://toidicode.com/live/?id=727)</div>
-
-</div>
 
 Như vậy là done, nếu bạn cần chuyển động nhanh hay chậm hơn thì bạn có thể thay đổi thời gian sao cho hợp ý bạn.
 
 ## 5, Demo và download thư viện.
+
+[Demo](https://toidicode.com/live/?id=727)
+
+[Download Source](https://toidicode.com/live/?id=727)

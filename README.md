@@ -308,4 +308,4 @@ Như vậy là done, nếu bạn cần chuyển động nhanh hay chậm hơn th
 
 [Demo](https://toidicode.com/live/?id=727)
 
-[Download Source](https://toidicode.com/live/?id=727)
+[Download Source](https://github.com/toidicode/button-animation/archive/1.0.0.zip)

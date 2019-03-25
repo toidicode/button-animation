@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toidicode.com - Create button animation</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #787878;
+        }
+
+        a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000000;
+            padding: 20px 40px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            overflow: hidden;
+            box-shadow: 0 1px 3px .4px #000000;
+            transition: all 0.3s;
+
+        }
+
+        a:hover {
+            box-shadow: 0 1px 7px .4px #000000;
+            color: red;
+        }
+
+        /*TOP*/
+        a span:nth-child(1) {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: red linear-gradient(to right, black, red);
+            top: 0;
+            right: 0;
+            animation: animationleft 2s linear 0.3s infinite;
+        }
+
+        /*Right*/
+        a span:nth-child(2) {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: red linear-gradient(to bottom, black, red);
+            top: 0;
+            right: 0;
+            animation: animationdown 2s linear 0.3s infinite;
+        }
+
+        /*Bottom*/
+        a span:nth-child(3) {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: red linear-gradient(to left, black, red);
+            bottom: 0;
+            right: 0;
+            animation: animationright 2s linear 0.3s infinite;
+        }
+
+        /*Left*/
+        a span:nth-child(4) {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: red linear-gradient(to top, black, red);
+            top: 0;
+            left: 0;
+            animation: animationtop 2s linear 0.3s infinite;
+        }
+
+        @keyframes animationdown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes animationtop {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes animationleft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes animationright {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Button
+</a>
+</body>
+</html>
